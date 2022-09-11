@@ -108,7 +108,6 @@ if __name__ == '__main__':
                 text = text + '\n' + f.read()
         final_tokens = Model()
         final_tokens.fit(text=text)
-        final_tokens.print_parameters()
 
         pickle.dump(final_tokens, open(f'{args.model}/model_' + datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + '.pkl', 'wb'))
     # Придумать, как реализвать нормально stdin. Ломается на символах ' ;
